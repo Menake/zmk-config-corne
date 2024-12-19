@@ -41,6 +41,15 @@
         };
     };
 
+    macros {
+        super: super {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_COMMAND &kp LCTRL &kp LEFT_ALT &kp LEFT_SHIFT>;
+            label = "SUPER";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -52,10 +61,9 @@
             //                    | TAB | LWR | SPC |   | ENT | RSE  | BACKSPACE |
 
             bindings = <
-  &kp Q         &kp W             &kp E            &kp R              &kp T        &kp Y    &kp U               &kp I             &kp O              &kp P
-  &HML LCTRL A  &HML LEFT_META S  &HML LEFT_ALT D  &HML LEFT_SHIFT F  &kp G        &kp H    &HMR RIGHT_SHIFT J  &HMR RIGHT_ALT K  &HMR RIGHT_META L  &HMR RCTRL SEMI
-  &kp Z         &kp X             &kp C            &kp V              &kp B        &kp N    &kp M               &kp COMMA         &kp DOT            &kp FSLH
-                                  &kp TAB          &mo 1              &kp SPACE    &kp RET  &mo 2               &kp BACKSPACE
+&kp Q            &kp W              &kp E  &kp R      &kp T               &kp Y               &kp U              &kp I            &kp O           &kp P          &HML LCTRL A  &HML LEFT_META S
+&HML LEFT_ALT D  &HML LEFT_SHIFT F  &kp G  &kp H      &HMR RIGHT_SHIFT J  &HMR RIGHT_ALT K    &HMR RIGHT_META L  &HMR RCTRL SEMI  &kp Z           &kp X          &kp C         &kp V
+&kp B            &kp N              &kp M  &kp COMMA  &kp DOT             &kp FSLH            &super             &mo 1            &HML TAB SPACE  &kp BACKSPACE  &mo 2         &kp ENTER
             >;
         };
 
@@ -67,10 +75,9 @@
             //                    |     |     |     |   |     |     |  |
 
             bindings = <
-  &kp F1        &kp F2         &kp F3        &kp F4          &kp F5          &kp F6    &kp F7         &kp F8       &kp F9     &kp F10
-  &kp LCTRL     &kp LEFT_META  &kp LEFT_ALT  &kp LEFT_SHIFT  &trans          &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &kp F11
-  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_SEL 5    &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp F12
-                               &trans        &trans          &trans          &trans    &kp INSERT     &kp DEL
+&kp F1        &kp F2          &kp F3         &kp F4       &kp F5    &kp F6     &kp F7     &kp F8   &kp F9        &kp F10       &kp LCTRL     &kp LEFT_META
+&kp LEFT_ALT  &kp LEFT_SHIFT  &trans         &kp LEFT     &kp DOWN  &kp UP     &kp RIGHT  &kp F11  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&bt BT_SEL 5  &kp HOME        &kp PAGE_DOWN  &kp PAGE_UP  &kp END   &kp F12    &trans     &trans   &trans        &trans        &kp INSERT    &kp DEL
             >;
         };
 
@@ -82,10 +89,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-  &mt EXCL NUMBER_1    &mt AT NUMBER_2        &mt HASH NUMBER_3              &kp LEFT_BRACE                  &kp RIGHT_BRACE     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LPAR         &kp RPAR      &kp GRAVE
-  &mt DOLLAR NUMBER_4  &mt PERCENT NUMBER_5   &mt CARET NUMBER_6             &kp EQUAL                       &kp GREATER_THAN    &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EXCLAMATION  &kp QUESTION  &kp PIPE
-  &mt AMPS NUMBER_7    &mt ASTERISK NUMBER_8  &mt LEFT_PARENTHESIS NUMBER_9  &mt RIGHT_PARENTHESIS NUMBER_0  &kp LESS_THAN       &kp MINUS         &kp UNDER          &trans           &trans        &bt BT_CLR
-                                              &kp ESCAPE                     &kp TILDE &trans          &trans    &trans         &trans
+&mt EXCL NUMBER_1   &mt AT NUMBER_2  &mt HASH NUMBER_3  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp LPAR   &kp RPAR           &kp GRAVE              &mt DOLLAR NUMBER_4            &mt PERCENT NUMBER_5
+&mt CARET NUMBER_6  &kp EQUAL        &kp GREATER_THAN   &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EXCLAMATION     &kp QUESTION       &kp PIPE   &mt AMPS NUMBER_7  &mt ASTERISK NUMBER_8  &mt LEFT_PARENTHESIS NUMBER_9  &mt RIGHT_PARENTHESIS NUMBER_0
+&kp LESS_THAN       &kp MINUS        &kp UNDER          &trans            &trans             &bt BT_CLR          &kp ESCAPE         &kp TILDE  &trans             &trans                 &trans                         &trans
             >;
         };
     };
