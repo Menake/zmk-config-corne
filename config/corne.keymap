@@ -23,7 +23,6 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             flavor = "tap-preferred";
-            hold-trigger-on-release;
             hold-trigger-key-positions = <30 31 32 33 34 35 25 26 5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35>;
         };
 
@@ -36,7 +35,6 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             flavor = "tap-preferred";
-            hold-trigger-on-release;
             hold-trigger-key-positions = <33 34 35 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
         };
     };
@@ -61,9 +59,9 @@
             //                    | TAB | LWR | SPC |   | ENT | RSE  | BACKSPACE |
 
             bindings = <
-&kp Q            &kp W              &kp E  &kp R      &kp T               &kp Y               &kp U              &kp I            &kp O           &kp P          &HML LCTRL A  &HML LEFT_META S
-&HML LEFT_ALT D  &HML LEFT_SHIFT F  &kp G  &kp H      &HMR RIGHT_SHIFT J  &HMR RIGHT_ALT K    &HMR RIGHT_META L  &HMR RCTRL SEMI  &kp Z           &kp X          &kp C         &kp V
-&kp B            &kp N              &kp M  &kp COMMA  &kp DOT             &kp FSLH            &super             &mo 1            &HML TAB SPACE  &kp BACKSPACE  &mo 2         &kp ENTER
+&kp Q            &kp W                &kp E  &kp R      &kp T                 &kp Y               &kp U           &kp I             &kp O           &kp P          &kp A      &kp S
+&HML LEFT_ALT D  &HML LEFT_COMMAND F  &kp G  &kp H      &HMR RIGHT_COMMAND J  &HMR RIGHT_ALT K    &kp L           &kp SEMICOLON     &kp Z           &kp X          &kp C      &kp V
+&kp B            &kp N                &kp M  &kp COMMA  &kp DOT               &kp FSLH            &kp LEFT_SHIFT  &kp LEFT_COMMAND  &HML TAB SPACE  &kp BACKSPACE  &kp ENTER  &sl 1
             >;
         };
 
@@ -75,9 +73,9 @@
             //                    |     |     |     |   |     |     |  |
 
             bindings = <
-&kp F1        &kp F2          &kp F3         &kp F4       &kp F5    &kp F6     &kp F7     &kp F8   &kp F9        &kp F10       &kp LCTRL     &kp LEFT_META
-&kp LEFT_ALT  &kp LEFT_SHIFT  &trans         &kp LEFT     &kp DOWN  &kp UP     &kp RIGHT  &kp F11  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&bt BT_SEL 5  &kp HOME        &kp PAGE_DOWN  &kp PAGE_UP  &kp END   &kp F12    &trans     &trans   &trans        &trans        &kp INSERT    &kp DEL
+&kp F1        &kp F2            &kp F3         &kp F4       &kp F5    &kp F6     &kp F7     &kp F8   &kp F9        &kp F10       &kp LCTRL     &kp LEFT_SHIFT
+&kp LEFT_ALT  &kp LEFT_COMMAND  &trans         &kp LEFT     &kp DOWN  &kp UP     &kp RIGHT  &kp F11  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&bt BT_SEL 5  &kp HOME          &kp PAGE_DOWN  &kp PAGE_UP  &kp END   &kp F12    &trans     &sl 0    &trans        &kp DELETE    &sl 2         &kp INS
             >;
         };
 
@@ -91,7 +89,7 @@
             bindings = <
 &mt EXCL NUMBER_1   &mt AT NUMBER_2  &mt HASH NUMBER_3  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp LPAR   &kp RPAR           &kp GRAVE              &mt DOLLAR NUMBER_4            &mt PERCENT NUMBER_5
 &mt CARET NUMBER_6  &kp EQUAL        &kp GREATER_THAN   &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EXCLAMATION     &kp QUESTION       &kp PIPE   &mt AMPS NUMBER_7  &mt ASTERISK NUMBER_8  &mt LEFT_PARENTHESIS NUMBER_9  &mt RIGHT_PARENTHESIS NUMBER_0
-&kp LESS_THAN       &kp MINUS        &kp UNDER          &trans            &trans             &bt BT_CLR          &kp ESCAPE         &kp TILDE  &trans             &trans                 &trans                         &trans
+&kp LESS_THAN       &kp MINUS        &kp UNDER          &trans            &trans             &bt BT_CLR          &trans             &kp TILDE  &kp ESC            &trans                 &trans                         &trans
             >;
         };
     };
